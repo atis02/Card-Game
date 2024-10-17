@@ -11,7 +11,7 @@ const Player = ({ playerName, hand, playCard, disabled }) => {
         {hand.map((card, index) => (
           <TouchableOpacity 
             key={index} 
-            onPress={() => !disabled && playCard(card, index)} // Disable card playing when disabled
+            onPress={() =>  playCard(card, index)} // Disable card playing when disabled
             disabled={disabled} // Optionally disable touchable
           > 
             <Image source={card.images} style={styles.cardImage} />
